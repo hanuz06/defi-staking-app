@@ -38,7 +38,7 @@
   "sourceMap": "27:102:0:-;;;57:37;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;27:102;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:102:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
   "deployedSourceMap": "27:102:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:102:0;;;;;;;;;;;;;;;;;;;;;;;;57:37;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;57:37:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;101:20;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;57:37;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;101:20::-;;;;;;;;;;;;;:::o",
   "source": "pragma solidity ^0.5.0;\r\n\r\ncontract DecentralBank {\r\n    string public name = 'Decentral Bank';\r\n    address public owner;    \r\n}",
-  "sourcePath": "F:\\BLOCKCHAIN TUTORIAL\\defi-staking-app-starter\\defi-staking-app-starter\\src\\contracts\\DecentralBank.sol",
+  "sourcePath": "F:\\BLOCKCHAIN TUTORIAL\\defi-staking-app\\src\\contracts\\DecentralBank.sol",
   "ast": {
     "absolutePath": "project:/src/contracts/DecentralBank.sol",
     "exportedSymbols": {
@@ -274,9 +274,17 @@
     "name": "solc",
     "version": "0.5.17+commit.d19bba13.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x0C7207296652024Bd531a223E82A4a080f599769",
+      "transactionHash": "0xfdd8731db55d74734f9c01879b6ead407c7bf803bd686c46ad29c462c6606424"
+    }
+  },
   "schemaVersion": "3.4.8",
-  "updatedAt": "2022-08-07T12:33:59.593Z",
+  "updatedAt": "2022-08-07T13:34:19.183Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {}
   },

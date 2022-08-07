@@ -74,7 +74,7 @@
   "sourceMap": "231:540:1:-;;;333:58;8:9:-1;5:2;;;30:1;27;20:12;5:2;333:58:1;373:10;365:5;;:18;;;;;;;;;;;;;;;;;;231:540;;;;;;",
   "deployedSourceMap": "231:540:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;231:540:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;589:174;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;589:174:1;;;;;;;;;;;;;;;;;;;:::i;:::-;;285:39;;;:::i;:::-;;;;;;;;;;;;;;;;;;;258:20;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;472:109;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;472:109:1;;;;;;;;;;;;;;;;;:::i;:::-;;589:174;448:5;;;;;;;;;;;434:19;;:10;:19;;;430:26;;;654:19;687:11;654:45;;708:8;:21;;;730:24;;708:47;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;708:47:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;708:47:1;;;;455:1;430:26;589:174;:::o;285:39::-;;;;:::o;258:20::-;;;;;;;;;;;;;:::o;472:109::-;448:5;;;;;;;;;;;434:19;;:10;:19;;;430:26;;;564:9;537:24;:36;;;;430:26;472:109;:::o",
   "source": "pragma solidity ^0.5.0;\r\n\r\n/// @title A title that should describe the contract/interface\r\n/// @author The name of the author\r\n/// @notice Explain to an end user what this does\r\n/// @dev Explain to a developer any extra details\r\n\r\ncontract Migrations {\r\n    address public owner;\r\n    uint256 public last_completed_migration;\r\n\r\n    constructor() public {\r\n        owner = msg.sender;\r\n    }\r\n\r\n    modifier restricted() {\r\n      if (msg.sender == owner) _;\r\n    }\r\n\r\n    function setCompleted(uint completed) public restricted {\r\n      last_completed_migration = completed;\r\n    }\r\n\r\n    function upgrade(address new_address) public restricted {\r\n      Migrations upgraded = Migrations(new_address);\r\n      upgraded.setCompleted(last_completed_migration);\r\n    }     \r\n}",
-  "sourcePath": "F:\\BLOCKCHAIN TUTORIAL\\defi-staking-app-starter\\defi-staking-app-starter\\src\\contracts\\Migrations.sol",
+  "sourcePath": "F:\\BLOCKCHAIN TUTORIAL\\defi-staking-app\\src\\contracts\\Migrations.sol",
   "ast": {
     "absolutePath": "project:/src/contracts/Migrations.sol",
     "exportedSymbols": {
@@ -1469,12 +1469,13 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x044E59a318AC840EF6875eB902a3b96e955228d9",
-      "transactionHash": "0x0a0a6deef27ba1a166ddd39d827e353699c99a2f6f4a4518a39fa23e1dad9754"
+      "address": "0xF482f81B44D141E1008D81151f8CdE231aA4E16c",
+      "transactionHash": "0x095c8bc8a264af6a4e08d39669e8422cec68c150dac3ae5270c78f7a937d66b9"
     }
   },
   "schemaVersion": "3.4.8",
-  "updatedAt": "2022-08-07T12:33:59.599Z",
+  "updatedAt": "2022-08-07T13:34:19.186Z",
+  "networkType": "ethereum",
   "devdoc": {
     "author": "The name of the author",
     "details": "Explain to a developer any extra details",

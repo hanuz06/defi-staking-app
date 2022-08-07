@@ -39,12 +39,13 @@ contract Tether {
     return true;
   }
 
+// this is a transfer from third party
   function transferFrom(address _from, address _to, uint _value) public returns (bool success) {
     require(_value <= balanceOf[_from]);
     require(_value <= allowance[_from][msg.sender]);
     balanceOf[_to] += _value;
     balanceOf[_from] -= _value;
-    allowance[msg.sender][_from ] -= _value;
+    allowance[_from][msg.sender] -= _value;
     emit Transfer(_from, _to, _value);
     return true;
   }
