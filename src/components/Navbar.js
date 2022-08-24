@@ -9,6 +9,7 @@ const Navbar = ({ account }) => {
     >
       <a
         className='navbar-brand col-sm-3 col-md-2 mr-0'
+        href=""
         style={{ color: "white" }}
       >
         <img
@@ -16,10 +17,10 @@ const Navbar = ({ account }) => {
           width='50'
           height='30'
           className='d-inline-block align-top'
-          alt='bank image'
+          alt='bank'
         />
         &nbsp; DAPP Yield Staking (Decentralized Banking)
-      </a>
+      </a> 
       <ul className='navbar-nav px-3'>
         <li className='text-nowrap d-none nav-item d-sm-none d-sm-block'>
           <small style={{ color: "white" }}>ACCOUNT NUMBER: {account}</small>
