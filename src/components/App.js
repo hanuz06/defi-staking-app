@@ -3,6 +3,8 @@ import Web3 from "web3";
 import "./app.css";
 import Navbar from "./Navbar";
 import Tether from "../truffle_abis/Tether.json";
+import RWD from "../truffle_abis/RWD.json";
+import DecentralBank from "../truffle_abis/DecentralBank.json";
 
 const App = (props) => {
   const [account, setAccount] = useState("0x0");
@@ -48,6 +50,36 @@ const App = (props) => {
         "Error! Tether contract not deployed - no detected network!"
       );
     }
+
+    // Load RWD Contract
+    const rwdData = RWD.networks[networkId];
+    if (rwdData) {
+      const rwd = new web3.eth.Contract(RWD.abi, rwdData.address);
+      setRWD({ rwd });
+      let rwdBalance = await rwd.methods.balanceOf(account).call();
+      setRWDBalance(rwdBalance.toString());
+    } else {
+      window.alert("Error! Reward Token not deployed - no detected network!");
+    }
+
+    // Load DecentralBank Contract
+    const decentralBankData = DecentralBank.networks[networkId];
+    if (decentralBankData) {
+      const decentralBank = new web3.eth.Contract(
+        DecentralBank.abi,
+        decentralBankData.address
+      );
+      setDecentralBank({ decentralBank });
+      let stakingBalance = await decentralBank.methods
+        .stakingBalance(account)
+        .call();
+      setStakingBalance(stakingBalance.toString());
+    } else {
+      window.alert(
+        "Error! DecentralBank contract not deployed - no detected network!"
+      );
+    }
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -62,7 +94,7 @@ const App = (props) => {
     <>
       <Navbar account={account} />
       <div className='test-center'>
-        <h1>App</h1>
+        <h1>{console.log(loading)}</h1>
       </div>
     </>
   );
